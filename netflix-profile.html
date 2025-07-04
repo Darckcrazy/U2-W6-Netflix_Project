@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Profile - Netflix</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: #141414;
+        color: #fff;
+      }
+      .navbar {
+        background: #141414;
+      }
+      .navbar-brand {
+        color: #e50914 !important;
+        font-weight: bold;
+        font-size: 2rem;
+      }
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        background: #00ff7f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+      }
+      .form-control,
+      .form-select {
+        background: #222;
+        color: #fff;
+        border: none;
+      }
+      .form-control:focus,
+      .form-select:focus {
+        background: #222;
+        color: #fff;
+      }
+      .btn-outline-light {
+        border-color: #fff;
+        color: #fff;
+      }
+      .btn-outline-light:hover {
+        background: #fff;
+        color: #141414;
+      }
+      .btn-danger {
+        background: #e50914;
+        border: none;
+      }
+      .btn-danger:hover {
+        background: #b0060f;
+      }
+      .section-title {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+      }
+      .settings-label {
+        font-weight: bold;
+        margin-top: 1.5rem;
+      }
+      .form-check-label {
+        margin-left: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <a class="navbar-brand" href="./netflix-home.html">NETFLIX</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-5" style="max-width: 600px">
+      <div class="section-title">Edit Profile</div>
+      <form>
+        <div class="d-flex align-items-center mb-4">
+          <a href="./netflix-profile.html"
+            ><img
+              src="Netflix-assets/assets/avatar.png"
+              alt="Profile"
+              class="profile-pic me-3"
+          /></a>
+          <input
+            type="text"
+            class="form-control"
+            value="Strive Student"
+            style="max-width: 300px"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Language:</label>
+          <select class="form-select" style="max-width: 200px">
+            <option selected>English</option>
+            <option>Italiano</option>
+            <option>Español</option>
+          </select>
+        </div>
+        <a href="./netflix-settings.html"
+          ><button type="button" class="btn btn-secondary mb-3">
+            Account Settings
+          </button></a
+        >
+        <div class="settings-label">Maturity Settings:</div>
+        <button type="button" class="btn btn-dark btn-sm mt-2 mb-2">
+          ALL MATURITY RATINGS
+        </button>
+        <div class="mb-3">
+          Show titles of <b>all maturity ratings</b> for this profile.
+        </div>
+        <button
+          type="button"
+          class="btn btn-outline-light btn-sm mb-4"
+          disabled
+        >
+          EDIT
+        </button>
+        <div class="settings-label">Autoplay controls</div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            checked
+            id="autoplay1"
+          />
+          <label class="form-check-label" for="autoplay1"
+            >Autoplay next episode in a series on all devices.</label
+          >
+        </div>
+        <div class="form-check mb-4">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            checked
+            id="autoplay2"
+          />
+          <label class="form-check-label" for="autoplay2"
+            >Autoplay previews while browsing on all devices.</label
+          >
+        </div>
+        <div class="d-flex gap-2">
+          <button type="submit" class="btn btn-light">SAVE</button>
+          <button type="button" class="btn btn-outline-light">CANCEL</button>
+          <button type="button" class="btn btn-danger">DELETE PROFILE</button>
+        </div>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix - Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <style>
+      body {
+        background: #141414;
+        color: #fff;
+      }
+      .navbar {
+        background: #141414;
+      }
+      .navbar-brand {
+        color: #e50914 !important;
+        font-weight: bold;
+        font-size: 2rem;
+      }
+      .section-title {
+        font-size: 1.5rem;
+        margin: 2rem 0 1rem 0;
+      }
+      .card {
+        background: #222;
+        border: none;
+      }
+      .card-img-top {
+        border-radius: 0;
+      }
+      .footer {
+        color: #888;
+        font-size: 0.9rem;
+        margin-top: 3rem;
+        text-decoration: none;
+      }
+      .footer a {
+        text-decoration: none !important;
+      }
+      .dropdown-menu {
+        background: #222;
+        color: #fff;
+      }
+      .dropdown-item {
+        color: #fff;
+      }
+      .dropdown-item:hover {
+        background: #333;
+      }
+      .film-scrollbar {
+        overflow-x: auto;
+        width: 100%;
+        /* 6 card intere + 5 spazi tra le card + 0.3 di una card */
+        max-width: calc(6 * 180px + 5 * 12px + 0.3 * 180px);
+        margin: 0 auto 1rem auto;
+        padding-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <!-- Desktop: logo + nav voci a sinistra, search/kids/avatar a destra -->
+        <div class="d-none d-lg-flex w-100 align-items-center flex-nowrap">
+          <a class="navbar-brand me-2" href="#">NETFLIX</a>
+          <ul class="navbar-nav flex-row justify-content-start">
+            <li class="nav-item mx-1">
+              <a class="nav-link text-white active" href="#">TV Shows</a>
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link text-white" href="#">Movies</a>
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link text-white" href="#">Recently Added</a>
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link text-white" href="#">My List</a>
+            </li>
+          </ul>
+          <div class="ms-auto d-flex align-items-center">
+            <form class="d-flex align-items-center me-2" role="search">
+              <input
+                class="form-control me-2 bg-dark text-white border-0"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                style="width: 120px"
+              />
+            </form>
+            <span class="me-3 text-white">KIDS</span>
+            <a href="./netflix-profile.html"
+              ><img
+                src="Netflix-assets/assets/avatar.png"
+                alt="Avatar"
+                width="32"
+                class="rounded-circle me-2"
+            /></a>
+          </div>
+        </div>
+        <!-- Mobile/tablet: tutto in una riga -->
+        <div
+          class="d-flex d-lg-none flex-row align-items-center justify-content-between w-100"
+        >
+          <a class="navbar-brand me-2" href="#">NETFLIX</a>
+          <div class="d-flex align-items-center ms-auto" style="gap: 0.5rem">
+            <form
+              class="d-flex align-items-center me-0"
+              role="search"
+              style="max-width: 120px"
+            >
+              <input
+                class="form-control bg-dark text-white border-0"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                style="width: 100%"
+              />
+            </form>
+            <span class="text-white">KIDS</span>
+            <a href="./netflix-profile.html"
+              ><img
+                src="Netflix-assets/assets/avatar.png"
+                alt="Avatar"
+                width="32"
+                class="rounded-circle"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Nav links separata per mobile/tablet -->
+    <div class="d-lg-none bg-dark border-bottom">
+      <ul class="nav nav-pills nav-fill flex-row w-100">
+        <li class="nav-item">
+          <a class="nav-link text-white active" href="#">TV Shows</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Movies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Recently Added</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">My List</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container-fluid">
+      <div class="d-flex align-items-center mt-4">
+        <h2 class="me-3">TV Shows</h2>
+        <div class="dropdown">
+          <button
+            class="btn btn-dark dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Genres
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">All</a></li>
+            <li><a class="dropdown-item" href="#">Drama</a></li>
+            <li><a class="dropdown-item" href="#">Comedy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-title">Trending Now</div>
+      <div class="row row-cols-3 row-cols-md-4 row-cols-lg-6 g-2">
+        <div class="col">
+          <div class="card">
+            <img
+              src="Netflix-assets/assets/media/media0.webp"
+              class="card-img-top"
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="Netflix-assets/assets/media/media1.jpg"
+              class="card-img-top"
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="Netflix-assets/assets/media/media2.webp"
+              class="card-img-top"
+            />
+          </div>
+        </div>
+        <div class="col d-none d-md-block">
+          <div class="card">
+            <img
+              src="Netflix-assets/assets/media/media3.webp"
+              class="card-img-top"
+            />
+          </div>
+        </div>
+        <div class="col d-none d-lg-block">
+          <div class="card">
+            <img
+              src="Netflix-assets/assets/media/media4.jpg"
+              class="card-img-top"
+            />
+          </div>
+        </div>
+        <div class="col d-none d-lg-block">
+          <div class="card">
+            <img
+              src="Netflix-assets/assets/media/media5.webp"
+              class="card-img-top"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="section-title">Watch It Again</div>
+      <div class="row row-cols-3 row-cols-md-4 row-cols-lg-6 g-2">
+        <div class="col">
+          <div class="card">
+            <img
+              src="Netflix-assets/assets/media/media6.jpg"
+              class="card-img-top"
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="Netflix-assets/assets/media/media7.webp"
+              class="card-img-top"
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="Netflix-assets/assets/media/media8.webp"
+              class="card-img-top"
+            />
+          </div>
+        </div>
+        <div class="col d-none d-md-block">
+          <div class="card">
+            <img
+              src="Netflix-assets/assets/media/media9.jpg"
+              class="card-img-top"
+            />
+          </div>
+        </div>
+        <div class="col d-none d-lg-block">
+          <div class="card">
+            <img
+              src="Netflix-assets/assets/media/media10.jpg"
+              class="card-img-top"
+            />
+          </div>
+        </div>
+        <div class="col d-none d-lg-block">
+          <div class="card">
+            <img
+              src="Netflix-assets/assets/media/media11.jpg"
+              class="card-img-top"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="section-title">New Releases</div>
+      <div class="row row-cols-3 row-cols-md-4 row-cols-lg-6 g-2 mb-5">
+        <div class="col">
+          <div class="card">
+            <img
+              src="Netflix-assets/assets/media/media12.jpg"
+              class="card-img-top"
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="Netflix-assets/assets/media/media13.jpg"
+              class="card-img-top"
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="Netflix-assets/assets/media/media14.webp"
+              class="card-img-top"
+            />
+          </div>
+        </div>
+        <div class="col d-none d-md-block">
+          <div class="card">
+            <img
+              src="Netflix-assets/assets/media/media15.jpg"
+              class="card-img-top"
+            />
+          </div>
+        </div>
+        <div class="col d-none d-lg-block">
+          <div class="card">
+            <img
+              src="Netflix-assets/assets/media/media16.webp"
+              class="card-img-top"
+            />
+          </div>
+        </div>
+        <div class="col d-none d-lg-block">
+          <div class="card">
+            <img
+              src="Netflix-assets/assets/media/media17.jpg"
+              class="card-img-top"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer container-fluid border-top pt-4">
+      <div class="d-flex flex-column align-items-center text-center mx-auto">
+        <div class="mb-3">
+          <a href="#" class="me-3 text-reset"
+            ><i class="bi bi-facebook" style="font-size: 1.5rem"></i
+          ></a>
+          <a href="#" class="me-3 text-reset"
+            ><i class="bi bi-instagram" style="font-size: 1.5rem"></i
+          ></a>
+          <a href="#" class="me-3 text-reset"
+            ><i class="bi bi-twitter" style="font-size: 1.5rem"></i
+          ></a>
+          <a href="#" class="me-3 text-reset"
+            ><i class="bi bi-youtube" style="font-size: 1.5rem"></i
+          ></a>
+        </div>
+        <div class="mb-2">
+          <a href="#" class="text-reset me-3">Audio and Subtitles</a>
+          <a href="#" class="text-reset me-3">Media Center</a>
+          <a href="#" class="text-reset me-3">Privacy</a>
+          <a href="#" class="text-reset">Contact Us</a>
+        </div>
+        <div class="mb-2">
+          <a href="#" class="text-reset me-3">Help Center</a>
+          <a href="#" class="text-reset me-3">Jobs</a>
+          <a href="#" class="text-reset">Cookie Preferences</a>
+        </div>
+        <div class="mt-3">
+          <button class="btn btn-outline-light btn-sm">Service Code</button>
+        </div>
+        <div class="mt-2">&copy; 1997-2019 Netflix, Inc.</div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
